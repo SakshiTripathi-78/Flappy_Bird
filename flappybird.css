@@ -3,5 +3,5 @@ body{
     text-align: center;
 }
 #board{
-    background-image: url("./flappybirdbg.png");
+    background-image: url("./flappybird/flappybirdbg.png");
 }
