@@ -36,9 +36,9 @@ let gravity = 0.4;
 let gameOver = false;
 let score = 0;
 
-let wingSound= new Audio("./sfx_wing.wav");
-let hitSound= new Audio("./sfx_hit.wav");
-let bgm= new Audio("./bgm_mario.mp3");
+let wingSound= new Audio("./flappybird/sfx_wing.wav");
+let hitSound= new Audio("./flappybird/sfx_hit.wav");
+let bgm= new Audio("./flappybird/bgm_mario.mp3");
 bgm.loop=true;
 
 window.onload = function() {
@@ -53,16 +53,16 @@ window.onload = function() {
 
     //load images
     birdImg = new Image();
-    birdImg.src = "./flappybird.png";
+    birdImg.src = "./flappybird/flappybird.png";
     birdImg.onload = function() {
         context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height);
     }
 
     topPipeImg = new Image();
-    topPipeImg.src = "./toppipe.png";
+    topPipeImg.src = "./flappybird/toppipe.png";
 
     bottomPipeImg = new Image();
-    bottomPipeImg.src = "./bottompipe.png";
+    bottomPipeImg.src = "./flappybird/bottompipe.png";
 
     requestAnimationFrame(update);
     setInterval(placePipes, 1500); //every 1.5 seconds
